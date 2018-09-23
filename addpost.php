@@ -5,14 +5,14 @@
  * Date: 22/09/2018
  * Time: 10:54 AM
  */
-include 'includes/header.php';
+include 'inc/header.php';
 echo "<title>Post an entry | Journlr</title></head>";
 
 
 ?>
 <body onload="setTimeAndDate()">
 <?php
-include 'includes/navbar.php'; ?>
+include 'inc/navbar.php'; ?>
 <div class="container align-vertical" style="width:40%">
     <div class="form-group align-self-center ">
         <form class="text-center border border-light p-5" action="addpost.php" method="post">
@@ -53,7 +53,7 @@ include 'includes/navbar.php'; ?>
     </div>
 </div>
 <?php
-include 'includes/footer.php';
+include 'inc/footer.php';
 ?>
 </body>
 </html>

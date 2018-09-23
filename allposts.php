@@ -5,7 +5,7 @@
  * Date: 22/09/2018
  * Time: 10:54 AM
  */
-include 'includes/header.php';
+include 'inc/header.php';
 echo "<title>All Posts | Journlr</title>";
 
 ?>
@@ -41,7 +41,7 @@ echo "<title>All Posts | Journlr</title>";
                 </div>
 </div>
 <?php
-include 'includes/footer.php';
+include 'inc/footer.php';
 ?>
 </body>
 </html>

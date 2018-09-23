@@ -5,19 +5,9 @@
  * Date: 21/09/2018
  * Time: 4:24 PM
  */
-?>
-<html>
-<head>
-    <title>Journlr</title>
 
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-
-    <link rel="stylesheet" href="css/screen.css">
-
-</head>
-<body>
-<?php
-include 'includes/navbar.php';
+include 'inc/header.php';
+include 'inc/navbar.php';
 ?>
 <div class="container align-vertical">
     <div class="jumbotron mt-12" id="jumbotron">
@@ -26,7 +16,8 @@ include 'includes/navbar.php';
     </div>
     <div class="row">
         <div class="col-6">
-            <p>Lorem ipsum dolor sit amet, eos ad debet suavitate, ea munere petentium patrioque has. Cu natum errem
+            <p>
+                Lorem ipsum dolor sit amet, eos ad debet suavitate, ea munere petentium patrioque has. Cu natum errem
                 ceteros nam. Sit nisl vidit ridens te, per id
                 esse idque signiferumque, has noster disputando liberavisse ne. Summo nobis mucius mei no, id tation
                 semper eam, ius tale graeco no. Id dicam eloquentiam
@@ -41,7 +32,8 @@ include 'includes/navbar.php';
             </p>
         </div>
         <div class="col-6">
-            <p>Lorem ipsum dolor sit amet, eos ad debet suavitate, ea munere petentium patrioque has. Cu natum errem
+            <p>
+                Lorem ipsum dolor sit amet, eos ad debet suavitate, ea munere petentium patrioque has. Cu natum errem
                 ceteros nam. Sit nisl vidit ridens te, per id
                 esse idque signiferumque, has noster disputando liberavisse ne. Summo nobis mucius mei no, id tation
                 semper eam, ius tale graeco no. Id dicam eloquentiam
@@ -63,6 +55,6 @@ include 'includes/navbar.php';
 
 </body>
 <?php
-include 'includes/footer.php';
+include 'inc/footer.php';
 ?>
 </html>

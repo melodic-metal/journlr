@@ -6,18 +6,11 @@
  * Date: 21/09/2018
  * Time: 5:33 PM
  */
+include 'inc/header.php';
+include 'inc/navbar.php';
 ?>
-    <html>
-    <head>
-        <title>Register | Journlr</title>
-        <link rel="stylesheet" href="css/screen.css">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-              integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-              crossorigin="anonymous">
-    </head>
-<?php
-include 'includes/navbar.php';
-?>
+
+
     <div class="container align-vertical" style="width:30%">
         <div class="form-group align-self-center ">
             <form class="text-center border border-light p-5">
@@ -36,5 +29,5 @@ include 'includes/navbar.php';
     </div>
 
 <?php
-include 'includes/footer.php';
+include 'inc/footer.php';
 ?>
