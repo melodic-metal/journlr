@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 /**
  * Created by PhpStorm.
  * User: brendan
@@ -32,15 +32,27 @@ include 'inc/navbar.php';
 if (isset($_POST['submit'])) {
     $email = mysqli_real_escape_string($_POST['email']);
     $password = $_POST['password'];
-    $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
-    $passwordStored = mysqli_query($conn, "SELECT password FROM USERS WHERE email='$email'");
-    if ($password = $passwordStored) {
-        $_SESSION['loggedin'] = true;
+    $query = "SELECT * FROM USERS WHERE email='$email'";
+    $result = mysqli_query($conn, $query);
+    $resultCheck = mysqli_num_rows($result);
+    if ($resultCheck < 1) {
+        header("Location: login.php?response=error");
+        exit();
     }
     else {
-        echo 'failed';
-    }
+        if ($row = mysqli_fetch_assoc($result)) {
+            $hashedPasswordCheck = password_verify($password, $row['password']);
+            if($hashedPasswordCheck == false) {
+                header("Location: login.php?response=error");
+            }
+            elseif($hashedPasswordCheck == true) {
+                $_SESSION['u_id'] = $row['email'];
+                $_SESSION['u_first'] = $row['firstname'];
+                header("Location: login.php?response=success");
 
+            }
+        }
+    }
 }
 ?>
 
