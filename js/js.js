@@ -17,6 +17,6 @@ function setTimeAndDate()
 
     var time = hour + ":" + minute;
     document.getElementById('datePicker').value = today;
-    document.getElementById('timePicker').value = time;
+    document.getElementById('timePicker').value = time.now();
 }
 

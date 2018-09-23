@@ -6,7 +6,7 @@ session_start();
  * Date: 21/09/2018
  * Time: 5:35 PM
  */
-$_SESSION['loggedIn'] = false;
+$_SESSION['loggedin'] = true;
 ?>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
@@ -14,13 +14,18 @@ $_SESSION['loggedIn'] = false;
             <div id="navbar-header">
                 <a class="navbar-brand" href="#">Journlr</a>
             </div>
+
             <ul class="nav navbar-nav mr-auto">
                 <li class="nav-item navbar"><a href="./index.php">Home</a></li>
+                <?php if($_SESSION['loggedin']): ?>
+                    <li class="nav-item navbar"><a href="./addpost.php">Add Post</a></li>
+                    <li class="nav-item navbar"><a href="./allposts.php">View Posts</a></li>
+                <?php endif;?>
             </ul>
-            <?php if(!$_SESSION['loggedIn']): ?>
+            <?php if(!$_SESSION['loggedin']): ?>
             <ol class="nav navbar-nav navbar-right">
                 <li class="nav-item">
-                    <a href="./register.php"><span class="nav-link fas fa-registered"></span> Sign Up</a>
+                    <a href="./register.php"><span class="nav-link fas fa-user-plus"></span> Sign Up</a>
                 </li>
                 <li class="nav-item">
                     <a href="./login.php"><span class="nav-link fas fa-sign-in-alt"></span> Login</a>
@@ -36,7 +41,7 @@ $_SESSION['loggedIn'] = false;
                 </li>
             </ol>
             <?php endif; ?>
-            </ol>
+
         </div>
     </nav>
 

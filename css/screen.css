@@ -20,6 +20,11 @@ a {
     padding: 120px 0;
 }
 body {
+    background-color: #f1f2f3;
+}
 
+.navbar a:hover {
+    color: #ddd;
+    text-decoration: none;
 }
 

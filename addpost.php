@@ -6,11 +6,11 @@
  * Time: 10:54 AM
  */
 include 'inc/header.php';
-echo "<title>Post an entry | Journlr</title></head>";
+echo "<title>Post an entry | Journlr</title></head><body onload=\"setTimeAndDate()\">";
 
 
 ?>
-<body onload="setTimeAndDate()">
+
 <?php
 include 'inc/navbar.php'; ?>
 <div class="container align-vertical" style="width:40%">
