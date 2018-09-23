@@ -1,0 +1,25 @@
+#container-fluid {
+    background-color: #bacafe;
+}
+#jumbotron {
+    margin-top: 30px;
+}
+
+.container {
+    position: relative;
+    height: 14rem;
+
+}
+a {
+    color: #17a2b8
+}
+
+.align-vertical {
+    justify-content: center;
+    align-items: center;
+    padding: 120px 0;
+}
+body {
+
+}
+
