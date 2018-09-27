@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Created by PhpStorm.
  * User: brendan
@@ -8,9 +7,10 @@
  */
 
 include 'inc/header.php';
+echo "<title>Login | Journlr</title>";
 include 'inc/navbar.php';
 ?>
-<title>Login | Journlr</title>
+
 
 
     <div class="container align-vertical" style="width:30%">
@@ -25,33 +25,36 @@ include 'inc/navbar.php';
                 <!-- Password -->
                 <input type="password" name="password" class="form-control" placeholder="Password" aria-describedby="defaultRegisterFormPasswordHelpBlock">
 
-                <button class="btn btn-info my-4 btn-block" type="submit">Sign in</button>
+                <button class="btn btn-info my-4 btn-block" type="submit" name="submit">Sign in</button>
             </form>
         </div>
     </div>
 
 <?php
 if (isset($_POST['submit'])) {
-    $email = mysqli_real_escape_string($_POST['email']);
+    $email = mysqli_real_escape_string($conn, $_POST['email']);
     $password = $_POST['password'];
     $query = "SELECT * FROM USERS WHERE email='$email'";
     $result = mysqli_query($conn, $query);
     $resultCheck = mysqli_num_rows($result);
-    if ($resultCheck == 0) {
-        header("Location: login.php?response=error");
+
+    if ($resultCheck < 1) {
+        header("Location: login.php?response=error1");
         exit();
     } else {
 
         if ($row = mysqli_fetch_assoc($result)) {
             $hashedPasswordCheck = password_verify($password, $row['password']);
             if($hashedPasswordCheck == false) {
-                header("Location: login.php?response=error");
+                $_SESSION['loggedin'] = false;
+                header("Location: login.php?response=error2");
                 exit();
             }
             elseif($hashedPasswordCheck == true) {
                 $_SESSION['loggedin'] = true;
                 $_SESSION['u_id'] = $row['email'];
                 $_SESSION['u_first'] = $row['firstname'];
+                $_SESSION['u_last'] = $row['lastname'];
                 header("Location: allposts.php");
                 exit();
 
@@ -60,6 +63,7 @@ if (isset($_POST['submit'])) {
 
     }
 }
+
 ?>
 
 <?php

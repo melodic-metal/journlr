@@ -33,15 +33,16 @@ include 'inc/navbar.php'; ?>
             if (isset($_POST['submitPost'])) {
                 $date = mysqli_real_escape_string($conn, $_POST['datePicker']);
                 $time = mysqli_real_escape_string($conn, $_POST['timePicker']);
-                $title = mysqli_real_escape_string($conn, $_POST['postTitle']);
-                $body = mysqli_real_escape_string($conn, $_POST['postBody']);
-                $username = 'bob';
-                $firstName = 'bob';
-                $lastName = 'downe';
+                $title = htmlentities(mysqli_real_escape_string($conn, $_POST['postTitle']));
+                $body = htmlentities(mysqli_real_escape_string($conn, $_POST['postBody']));
+                $username = $_SESSION['u_id'];
+                $firstName = $_SESSION['u_first'];
+                $lastName = $_SESSION['u_last'];
+                //$lastName = ;
 
-                $query = "INSERT INTO journlr(username, firstName, lastName, title, postbody, created_at) VALUES('$username', '$firstName', '$lastName',  '$title', '$body', '$date $time')";
+                $query = "INSERT INTO journlr(owner_id, firstName, lastName, title, postbody, created_at) VALUES('$username', '$firstName', '$lastName',  '$title', '$body', '$date $time')";
                 if(mysqli_query($conn, $query)) {
-                    header('Location: /journlr');
+                    header('Location: allposts.php');
                 }
                 else {
                     echo "Error".mysqli_error($conn);

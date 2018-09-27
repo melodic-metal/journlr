@@ -85,12 +85,6 @@ if (isset($_POST['submit'])) {
         }
 
 
-    /*
-    if (mysqli_query($conn, $query)) {
-        header('Location: /journlr/allposts.php');
-    } else {
-        echo "Error" . mysqli_error($conn);
-    }*/
 }
 ?>
 

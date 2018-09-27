@@ -10,14 +10,18 @@ echo "<title>All Posts | Journlr</title></head><body>";
 include 'inc/navbar.php';
 ?>
 
-
+<?php
+if(!isset($_SESSION['u_id'])) {
+    header("Location: login.php");
+}
+?>
 <div class="container align-vertical" style="width:40%">
     <div class="form-group align-self-center ">
         <div class=""></div>
 
         <?php
-
-        $query = 'SELECT * FROM journlr ORDER BY created_at DESC';
+        $uid = $_SESSION['u_id'];
+        $query = "SELECT * FROM journlr WHERE owner_id='".$uid."' ORDER BY created_at DESC";
         $result = mysqli_query($conn, $query);
 
         $posts = mysqli_fetch_all($result, MYSQLI_ASSOC);
