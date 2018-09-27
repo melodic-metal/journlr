@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" autoUpload="Always" serverName="Journlr">
+    <serverData>
+      <paths name="Journlr">
+        <serverdata>
+          <mappings>
+            <mapping deploy="\journlr" local="$PROJECT_DIR$" web="/journlr" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+    <option name="myAutoUpload" value="ALWAYS" />
+  </component>
+</project>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="d176cb08-5ddd-45f1-ba29-217cfb705a21" name="Journlr" url="http://localhost">
+        <fileTransfer port="0" mountedRoot="C:\laragon\www" accessType="MOUNT" />
+      </webServer>
+    </option>
+  </component>
+</project>

@@ -1,14 +1,16 @@
 <?php
-session_start();
+
 /**
  * Created by PhpStorm.
  * User: brendan
  * Date: 21/09/2018
  * Time: 5:33 PM
  */
+
 include 'inc/header.php';
 include 'inc/navbar.php';
 ?>
+<title>Login | Journlr</title>
 
 
     <div class="container align-vertical" style="width:30%">
@@ -35,23 +37,27 @@ if (isset($_POST['submit'])) {
     $query = "SELECT * FROM USERS WHERE email='$email'";
     $result = mysqli_query($conn, $query);
     $resultCheck = mysqli_num_rows($result);
-    if ($resultCheck < 1) {
+    if ($resultCheck == 0) {
         header("Location: login.php?response=error");
         exit();
-    }
-    else {
+    } else {
+
         if ($row = mysqli_fetch_assoc($result)) {
             $hashedPasswordCheck = password_verify($password, $row['password']);
             if($hashedPasswordCheck == false) {
                 header("Location: login.php?response=error");
+                exit();
             }
             elseif($hashedPasswordCheck == true) {
+                $_SESSION['loggedin'] = true;
                 $_SESSION['u_id'] = $row['email'];
                 $_SESSION['u_first'] = $row['firstname'];
-                header("Location: login.php?response=success");
+                header("Location: allposts.php");
+                exit();
 
             }
         }
+
     }
 }
 ?>

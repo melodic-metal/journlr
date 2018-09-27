@@ -6,6 +6,7 @@
  * Time: 11:31 AM
  */
 require('db.php');
+
 ?>
 <!DOCTYPE html>
 <html>
