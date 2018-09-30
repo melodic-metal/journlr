@@ -8,7 +8,11 @@
 .container {
     position: relative;
     height: 14rem;
-
+}
+.main-container {
+    margin-left: 170px;
+    margin-right: 170px;
+    width: auto;
 }
 a {
     color: #17a2b8
@@ -21,10 +25,31 @@ a {
 }
 body {
     background-color: #f1f2f3;
-}
+    background-image: url("linen.jpg");
+    background-repeat: repeat;
 
+}
+p .centred {
+    text-align: center;
+}
 .navbar a:hover {
     color: #ddd;
     text-decoration: none;
+
+}
+.posts-container {
+    overflow:hidden;
+    height:1%;
+}
+.post {
+    height: auto;
+    overflow: auto;
+    border: #1d2124;
+    border-style: solid;
+    border-radius: 4px;
+}
+
+.footer a:hover {
+    color:#000;
 }
 

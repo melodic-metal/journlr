@@ -7,7 +7,7 @@
  */
 
 ?>
-<div class="container-fluid">
+<div class="container-fluid footer">
 
     <nav class="navbar navbar-dark alert-dark navbar-expand-lg fixed-bottom">
         <div class="container-fluid">

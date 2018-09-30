@@ -15,13 +15,13 @@ if(!isset($_SESSION['u_id'])) {
     header("Location: login.php");
 }
 ?>
-<div class="container align-vertical" style="width:40%">
+<div class="container-fluid align-vertical main-container" >
     <div class="form-group align-self-center ">
         <div class=""></div>
 
         <?php
-        $uid = $_SESSION['u_id'];
-        $query = "SELECT * FROM journlr WHERE owner_id='".$uid."' ORDER BY created_at DESC";
+
+        $query = "SELECT * FROM journlr WHERE owner_id='".$_SESSION['u_id']."' ORDER BY created_at DESC";
         $result = mysqli_query($conn, $query);
 
         $posts = mysqli_fetch_all($result, MYSQLI_ASSOC);
@@ -33,20 +33,22 @@ if(!isset($_SESSION['u_id'])) {
         ?>
         <h1>All Posts</h1>
         <?php foreach ($posts as $post): ?>
-        <div>
-            <div>
+        <div class="posts-container">
+            <div class="post">
                 <h3><?php echo $post['title'] ?></h3>
-                <small><?php echo $post['created_at']; ?></small>
-                <div>
+                <small><p class="centred"><?php echo $post['created_at']; ?></p></small>
+                <hr>
+                <div class="postbody">
                     <p>
-                    <?php echo $post['postbody']; ?>
+                    <?php echo nl2br($post['postbody']); ?>
                 </div>
             </div>
         </div>
         <input type="hidden" value="<?php echo $post['id']; ?>">
-    </div>
+        <br/>
+
     <?php endforeach; ?>
-</div>
+
 
 <?php
 include 'inc/footer.php';

@@ -18,7 +18,6 @@ include 'inc/navbar.php';
             <div class="input-group">
 
                 <input style="width:48% " class="form-control " placeholder="First Name" name="firstname" type="text"/>
-                &nbsp;
                 <input style="width:48% " class="form-control " placeholder="Last Name" name="lastname" type="text"/>
             </div>
             <div class="controls">
@@ -49,9 +48,9 @@ include 'inc/navbar.php';
 </div>
 <?php
 if (isset($_POST['submit'])) {
-    $firstName = mysqli_real_escape_string($conn, $_POST['firstname']);
-    $lastName = mysqli_real_escape_string($conn, $_POST['lastname']);
-    $email = mysqli_real_escape_string($conn, $_POST['email']);
+    $firstName = htmlentities(mysqli_real_escape_string($conn, $_POST['firstname']));
+    $lastName = htmlentities(mysqli_real_escape_string($conn, $_POST['lastname']));
+    $email = htmlentities(mysqli_real_escape_string($conn, $_POST['email']));
     $password = $_POST['password'];
 
 

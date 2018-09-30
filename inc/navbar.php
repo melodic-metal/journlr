@@ -32,7 +32,7 @@
             <ol class="nav navbar-nav navbar-right">
                 <li class="nav-item"><?php
 
-                    print "Welcome, " . $_SESSION["u_first"];
+                    print "<p>Welcome, " . $_SESSION["u_first"]."</p>";
 
                     ?>
                 </li>
