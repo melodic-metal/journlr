@@ -26,10 +26,10 @@ include 'inc/navbar.php'; ?>
             <input type="time" id="timePicker" name="timePicker" class="form-control">
             <hr>
             <label for="postTitle">Title</label>
-            <input type="text" placeholder="How was your day?" id="postTitle" name="postTitle" class="form-control">
+            <input type="text" placeholder="How was your day?" id="postTitle" name="postTitle" class="form-control" required>
             <hr>
             <label for="postBody">Type your post</label>
-            <textarea name="postBody" id="postBody" cols="30" rows="10" class="form-control"></textarea>
+            <textarea name="postBody" id="postBody" cols="30" rows="10" class="form-control" required></textarea>
             <hr>
             <button type="submit" id="submitPost" name="submitPost" class="btn btn-info my-4">submit post
             </button>
@@ -44,7 +44,7 @@ include 'inc/navbar.php'; ?>
                 $lastName = $_SESSION['u_last'];
                 //$lastName = ;
 
-                $query = "INSERT INTO journlr(owner_id, firstName, lastName, title, postbody, created_at) VALUES('$username', '$firstName', '$lastName',  '$title', '$body', '$date $time')";
+                $query = "INSERT INTO JOURNLR(owner_id, firstName, lastName, title, postbody, created_at) VALUES('$username', '$firstName', '$lastName',  '$title', '$body', '$date $time')";
                 if(mysqli_query($conn, $query)) {
                     header('Location: allposts.php');
                 }

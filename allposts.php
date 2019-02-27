@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: brendan
- * Date: 22/09/2018
- * Time: 10:54 AM
- */
 include 'inc/header.php';
 echo "<title>All Posts | Journlr</title></head><body>";
 include 'inc/navbar.php';
@@ -21,7 +15,7 @@ if(!isset($_SESSION['u_id'])) {
 
         <?php
 
-        $query = "SELECT * FROM journlr WHERE owner_id='".$_SESSION['u_id']."' ORDER BY created_at DESC";
+        $query = "SELECT * FROM JOURNLR WHERE owner_id='".$_SESSION['u_id']."' ORDER BY created_at DESC";
         $result = mysqli_query($conn, $query);
 
         $posts = mysqli_fetch_all($result, MYSQLI_ASSOC);
@@ -37,6 +31,7 @@ if(!isset($_SESSION['u_id'])) {
             <div class="post">
                 <h3><?php echo $post['title'] ?></h3>
                 <small><p class="centred"><?php echo $post['created_at']; ?></p></small>
+		<small><p class="centred"><a href="deletepost.php?id=<?php echo $post['id']; ?>">Delete</a></small>
                 <hr>
                 <div class="postbody">
                     <p>
@@ -48,6 +43,10 @@ if(!isset($_SESSION['u_id'])) {
         <br/>
 
     <?php endforeach; ?>
+
+
+
+
 
 
 <?php

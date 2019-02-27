@@ -20,8 +20,8 @@
             <li class="nav-item navbar"><a href="./index.php">Home</a></li>
             <?php if (isset($_SESSION['u_id'])): ?>
                 <li class="nav-item navbar"><a href="./addpost.php">Add Post</a></li>
-                <li class="nav-item navbar"><a href="./allposts.php">View Posts</a></li>
-
+                <li class="nav-item navbar"><a href="./latest.php">Latest</a></li>
+		<li class="nav-item navbar"><a href=./allposts.php>All posts</a></li>
 
             <?php endif; ?>
         </ul>
