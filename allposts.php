@@ -27,7 +27,7 @@ if(!isset($_SESSION['u_id'])) {
         ?>
         <h1>All Posts</h1>
         <?php foreach ($posts as $post): ?>
-        <div class="posts-container">
+        <div class="container">
             <div class="post">
                 <h3><?php echo $post['title'] ?></h3>
                 <small><p class="centred"><?php echo $post['created_at']; ?></p></small>

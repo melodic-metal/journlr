@@ -7,9 +7,9 @@
  */
 
 ?>
-<div class="container-fluid footer">
+<div class="container-fluid">
 
-    <nav class="navbar navbar-dark alert-dark navbar-expand-lg fixed-bottom">
+    <nav class="navbar footer navbar-dark alert-dark navbar-expand-lg" style="position: absolute; bottom:0;width:100%">
         <div class="container-fluid">
             <ul class="nav navbar-nav mr-auto">
                 <li class="nav-item"><a href="./about.php">About</a></li>

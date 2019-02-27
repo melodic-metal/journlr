@@ -30,12 +30,12 @@
         <?php if (isset($_SESSION['u_id'])):
            ?>
             <ol class="nav navbar-nav navbar-right">
-                <li class="nav-item"><?php
+                <li class="nav-item testing"><?php
 
                     print "<p>Welcome, " . $_SESSION["u_first"]."</p>";
 
                     ?>
-                </li>
+		</li>
                 <li class="nav-item">
                     <a href="./settings.php"><span class="nav-link fas fa-wrench"></span> Settings</a>
                 </li>
