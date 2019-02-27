@@ -9,7 +9,7 @@ require('config.php');
 $conn = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 
 if(mysqli_connect_errno()) {
-        echo("Sorry, database unavailable". mysqli_connect_errno());
+        echo("Sorry, database unavailable: ". mysqli_connect_errno());
 }
 
 //$result = $mysqli->query("SELECT * FROM journlr");

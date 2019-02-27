@@ -66,7 +66,7 @@ if (isset($_POST['submit'])) {
                 header('Location: register.php?response=email');
                 exit();
             } else {
-                $query = "SELECT * FROM users WHERE email='$email'";
+                $query = "SELECT * FROM USERS WHERE email='$email'";
                 $result = mysqli_query($conn, $query);
                 $result_check = mysqli_num_rows($result);
 
@@ -75,7 +75,7 @@ if (isset($_POST['submit'])) {
                     exit();
                 } else {
                     $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
-                    $query = "INSERT INTO users (email, password, firstname, lastname) VALUES('$email', '$hashedPassword', '$firstName', '$lastName')";
+                    $query = "INSERT INTO USERS (email, password, firstname, lastname) VALUES('$email', '$hashedPassword', '$firstName', '$lastName')";
                     mysqli_query($conn, $query);
                     header("Location: register.php?response=success");
                     exit();
