@@ -1,0 +1,62 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: brendan
+ * Date: 27/09/2018
+ * Time: 7:25 PM
+ */
+
+include("inc/header.php");
+include("inc/navbar.php");
+?>
+    <div class="container align-vertical" style="width:30%">
+        <div class="form-group align-self-center ">
+		
+            	<div class="tab">
+			<button class="tablinks" onclick="openTab(event, 'Account')">Account</button>
+			<button class="tablinks" onclick="openTab(event, 'Misc')">Misc</button>
+		</div>
+
+		<!-- Tab content -->
+		<div id="Account" class="tabcontent active" style="display:block;">
+			<p>account prefs here</p>
+		</div>
+
+		<div id="Paris" class="tabcontent">
+			<h3>Paris</h3>
+			<p>Paris is the capital of France.</p>
+		</div>
+
+		<div id="Tokyo" class="tabcontent">
+			<h3>Tokyo</h3>
+			<p>Tokyo is the capital of Japan.</p>
+		</div> 
+		<button class="btn btn-info my-4 btn-block" type="submit" name="submit" style="position:relative;">Save</button>
+         </div>
+    </div>
+<script>
+function openTab(evt, tab) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
+
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(tab).style.display = "block";
+  evt.currentTarget.className += " active";
+} 
+</script>   
+
+<?php
+include("inc/footer.php");
+?>

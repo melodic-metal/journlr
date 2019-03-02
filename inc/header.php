@@ -7,7 +7,7 @@
  */
 session_start();
 require('db.php');
-
+require('parsedown.php');
 ?>
 <!DOCTYPE html>
 <html>
