@@ -15,7 +15,8 @@ include 'inc/navbar.php';
     <div class=" align-self-center ">
 
         <form method="POST" action="register.php">
-            <div class="input-group">
+            <div class="border">
+	    <div class="input-group">
 
                 <input style="width:48% " class="form-control " placeholder="First Name" name="firstname" type="text"/>
                 <input style="width:48% " class="form-control " placeholder="Last Name" name="lastname" type="text"/>
@@ -42,6 +43,7 @@ include 'inc/navbar.php';
                 <button class="btn btn-light my-4 mr-auto" type="button">Cancel</button>
 
             </div>
+	</div>
 
         </form>
     </div>

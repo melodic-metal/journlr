@@ -9,11 +9,10 @@ if(!isset($_SESSION['u_id'])) {
     header("Location: login.php");
 }
 ?>
-<div class="container-fluid align-vertical main-container" >
-    <div class="form-group align-self-center ">
-        <div class=""></div>
-
-        <?php
+<div class="container">
+	<div class="align-vertical" >
+    		<div class="form-group align-self-center ">
+                	<?php
 
         $query = "SELECT * FROM JOURNLR WHERE owner_id='".$_SESSION['u_id']."' ORDER BY created_at DESC";
         $result = mysqli_query($conn, $query);
@@ -25,19 +24,18 @@ if(!isset($_SESSION['u_id'])) {
         mysqli_close($conn);
 
         ?>
-        <h1>All Posts</h1>
         <?php foreach ($posts as $post): ?>
-        <div class="container">
-            <div class="post">
-                <h3><?php echo $post['title'] ?></h3>
-                <small><p class="centred"><?php echo $post['created_at']; ?></p></small>
-		<small><p class="centred"><a href="deletepost.php?id=<?php echo $post['id']; ?>">Delete</a></small>
+
+            <div class="post border">
+                <h3 class="title"><a href="viewpost.php?id=<?php echo $post['id']?>"><?php echo $post['title'] ?></a></h3>
+                <small><p class="centred date"><?php echo $post['created_at']; ?></p>
+		<a class="date" href="deletepost.php?id=<?php echo $post['id']; ?>"><span class="fas fa-trash"></span></a></small> <small><a href="editpost.php?id=<?php echo $post['id']; ?>"><span class="fas fa-edit"></span></a></small>
+
                 <hr>
                 <div class="postbody">
                     <p>
                     <?php echo nl2br($post['postbody']); ?>
                 </div>
-            </div>
         </div>
         <input type="hidden" value="<?php echo $post['id']; ?>">
         <br/>
@@ -47,7 +45,9 @@ if(!isset($_SESSION['u_id'])) {
 
 
 
-
+</div>
+</div>
+</div>
 
 <?php
 include 'inc/footer.php';

@@ -3,24 +3,57 @@ html {
  min-height: 100%;
 }
 
-#container-fluid {
-    background-color: #000;
-}
-#jumbotron {
-    margin-top: 30px;
+body {
+    background-color: #f1f2f3;
+    background-image: url("linen.jpg");
+    background-repeat: repeat;
+
 }
 
-.container {
+a {
+    color: #17a2b8;
+}
+
+p .centred {
+    text-align: center;
+}
+
+.postbody {
+ margin-left: 6px;
+  
+}
+.title {
+ margin-top: 6px;
+ margin-left:6px; 
+ 
+}
+.title a:hover {
+ color: #ddd;
+ text-decoration: none;
+}
+.date { 
+ margin-left: 6px;
+}
+
+.jumbotron {
+    margin-top: 30px;
+}
+.addpost {
+ margin-left: 170px;
+ margin-right: 170px;
+}
+/*.container {
     position: relative;
     height: 14rem;
+}*/
+
+.fa-exclamation {
+ color: black;
 }
 .main-container {
-    margin-left: 170px;
-    margin-right: 170px;
-    width: auto;
-}
-a {
-    color: #17a2b8
+    margin-left: 210px;
+    margin-right: 210px;
+   
 }
 
 .align-vertical {
@@ -28,30 +61,29 @@ a {
     align-items: center;
     padding: 120px 0;
 }
-body {
-    background-color: #f1f2f3;
-    background-image: url("linen.jpg");
-    background-repeat: repeat;
 
-}
-p .centred {
-    text-align: center;
-}
 .navbar a:hover {
     color: #ddd;
     text-decoration: none;
 
 }
-.posts-container {
-    overflow:hidden;
-    height:1%;
+
+.border {
+    border: #e5e6e5;
+    border-style: solid;
+    border-radius: 4px;
+
+}
+.header {
+
 }
 .post {
     height: auto;
-    overflow: auto;
+    overflow: visible;
     border: #1d2124;
     border-style: solid;
     border-radius: 4px;
+    position: relative;	
 }
 
 .footer {

@@ -20,7 +20,8 @@ $Parsedown = new Parsedown();
 <?php
 
 include 'inc/navbar.php'; ?>
-<div class="container align-vertical" style="width:40%">
+<div class="container">
+<div class="align-vertical addpost">
     <div class="form-group align-self-center ">
         <form class="text-center border border-light p-5" action="addpost.php" method="post">
             <label for="datePicker">Date</label>
@@ -62,6 +63,7 @@ include 'inc/navbar.php'; ?>
             ?>
         </form>
     </div>
+</div>
 </div>
 <?php
 include 'inc/footer.php';

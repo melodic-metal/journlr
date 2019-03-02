@@ -9,9 +9,8 @@
  */
 
 ?>
-
+<title>Journlr</title>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <div class="container-fluid">
         <div id="navbar-header">
             <a class="navbar-brand" href="#">Journlr</a>
         </div>
@@ -26,25 +25,17 @@
             <?php endif; ?>
         </ul>
 
-
-        <?php if (isset($_SESSION['u_id'])):
-           ?>
-            <ol class="nav navbar-nav navbar-right">
-                <li class="nav-item testing"><?php
-
-                    print "<p>Welcome, " . $_SESSION["u_first"]."</p>";
-
-                    ?>
-		</li>
-                <li class="nav-item">
-                    <a href="./settings.php"><span class="nav-link fas fa-wrench"></span> Settings</a>
-                </li>
-                <li class="nav-item">
-                    <a href="./logout.php"><span class="nav-link fas fa-sign-out-alt"></span> Sign Out</a>
-                </li>
-            </ol>
-
-        <?php  else: ?>
+      <?php if (isset($_SESSION['u_id'])): 
+	?>
+        <span class="navbar-text navbar-right">Welcome, <?php echo $_SESSION['u_first']?> </span>
+      <ol class="nav navbar-nav navbar-right">
+        <li class="nav-item">
+          <a href="./settings.php"><i class="nav-link fas fa-wrench"></i>Settings</a>
+        </li>
+        <li class="nav-item">
+          <a href="./logout.php"><span class="nav-link fas fa-sign-out-alt"></span>Sign Out</a>
+        </li></ol>
+	<?php  else: ?>
             <ol class="nav navbar-nav navbar-right">
                 <li class="nav-item">
                     <a href="./register.php"><span class="nav-link fas fa-user-plus"></span> Sign Up</a>
@@ -52,9 +43,7 @@
                 <li class="nav-item">
                     <a href="./login.php"><span class="nav-link fas fa-sign-in-alt"></span> Login</a>
                 </li>
-
+	   </ol> 
         <?php endif; ?>
 
-    </div>
 </nav>
-
