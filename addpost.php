@@ -56,7 +56,7 @@ include 'inc/navbar.php'; ?>
                     header('Location: allposts.php');
                 }
                 else {
-                    echo "Error".mysqli_error($conn);
+                    echo "Error: ".mysqli_error($conn);
                 }
             }
 

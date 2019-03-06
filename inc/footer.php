@@ -13,6 +13,7 @@
             <ol class="nav navbar-nav mr-auto">
                 <li class="nav-item navbar"><a href="./about.php">About</a></li>
                 <li class="nav-item navbar"><a href="#">Terms of use</a></li>
+		<li class="nav-item navbar"><a href="https://bitbucket.org/melodic-metal/journlr">Source</a></li>
             </ol>
             <ul class="ml-auto">&copy; Brendan Kelly 2018</ul>
     </nav>

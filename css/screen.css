@@ -18,6 +18,22 @@ p .centred {
     text-align: center;
 }
 
+label {
+ display: inline-block;
+ float: left;
+ margin-right: 10px;
+}
+
+input {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display:inline-block;
+    *display: inline;     /* for IE7*/
+    zoom:1;              /* for IE7*/
+    vertical-align:middle;
+    width: 30%;
+}
+
 .postbody {
  margin-left: 6px;
   
@@ -100,8 +116,17 @@ p .centred {
 
 .nav-item {
   color: white;
+
 }
 
+.testing123 {
+  margin-left: 20px;
+}
+
+#submit {
+  
+  margin-top: 15px;	
+}
  /* Style the tab */
 /*.tab {
   overflow: hidden;

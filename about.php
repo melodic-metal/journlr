@@ -5,24 +5,15 @@
  * Date: 21/09/2018
  * Time: 7:48 PM
  */
-?>
-<html>
-<head>
-    <title>Register | Journlr</title>
 
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet"
-          id="bootstrap-css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="css/screen.css">
-    <script src="js/js.js"></script>
-</head>
-<?php
-include 'inc/navbar.php';
+include('inc/header.php');
+include('inc/navbar.php');
 ?>
 
 <div class="container">
-    test
+	<div class="align-vertical">
+		<p>Journlr is a free, open source, self-hosted private journalling app. It will always be free and will not implement paid features</p>
+	</div>
 </div>
 
 <?php

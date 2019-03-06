@@ -9,53 +9,49 @@
 include("inc/header.php");
 include("inc/navbar.php");
 ?>
-    <div class="container align-vertical" style="width:30%">
-        <div class="form-group align-self-center ">
-		
-            	<div class="tab">
-			<button class="tablinks" onclick="openTab(event, 'Account')">Account</button>
-			<button class="tablinks" onclick="openTab(event, 'Misc')">Misc</button>
-		</div>
+<div class="container border border-light" style="margin-top: 80px; margin-left: 170px; margin-right: 170px;">
+        <div class="form-group align-self-center" style="margin-top: 30px;">
+	   <form method="POST">
+            	<div class="row">
+  			<div class="col-2">
+				<div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+					<a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Home</a>
+					<a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Profile</a>
+					<a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Messages</a>
+					<a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</a>
+				</div>
+  			</div>
+  			<div class="col-6 form-group">
+    				<div class="tab-content" id="v-pills-tabContent">
+	      			<div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">Home</div>
+	      			<div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                			<label for="firstname">First Name</label>
+                			<input type="text" id="firstname" class="form-control" />
+					<label for="lastname">Last Name</label>
+					<input type="text" id="lastname" class="form-control" />
 
-		<!-- Tab content -->
-		<div id="Account" class="tabcontent active" style="display:block;">
-			<p>account prefs here</p>
-		</div>
+                			<label for="email">Email</label>
+                			<input type="text" id="email" class="form-control " />
+					<label for="password">Password</label>
+					<input type="password" id="password" class="form-control" />
+            			</div>
+      				<div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+					<p>Messages</p>
+				</div>
+      				<div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">Settings</div>
 
-		<div id="Paris" class="tabcontent">
-			<h3>Paris</h3>
-			<p>Paris is the capital of France.</p>
-		</div>
+				</div>
+			<button class="btn btn-info" id="submit" type="submit" name="submit" style="position: relative">Save</button>
 
-		<div id="Tokyo" class="tabcontent">
-			<h3>Tokyo</h3>
-			<p>Tokyo is the capital of Japan.</p>
-		</div> 
-		<button class="btn btn-info my-4 btn-block" type="submit" name="submit" style="position:relative;">Save</button>
-         </div>
-    </div>
-<script>
-function openTab(evt, tab) {
-  // Declare all variables
-  var i, tabcontent, tablinks;
+  		</div>
 
-  // Get all elements with class="tabcontent" and hide them
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
 
-  // Get all elements with class="tablinks" and remove the class "active"
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
 
-  // Show the current tab, and add an "active" class to the button that opened the tab
-  document.getElementById(tab).style.display = "block";
-  evt.currentTarget.className += " active";
-} 
-</script>   
+	</form>
+</div></div></div>
+
+
+
 
 <?php
 include("inc/footer.php");
